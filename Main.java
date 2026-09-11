@@ -26,6 +26,9 @@ class Math{
         }
         System.out.println(n+" is a prime");
     }
+    public int lcm(int a, int b){
+        return (a*b)/gcd(a,b);
+    }
 
 }
 public class Main{
@@ -38,5 +41,6 @@ public class Main{
     System.out.println(a+" is even: "+m.oe(a));
     System.out.println("Sum of first "+a+" natural numbers is: "+m.nsum(a));
     m.isprime(a);
+    System.out.println("LCM of "+a+" and "+b+" is: "+m.lcm(a,b));
 }
 }
