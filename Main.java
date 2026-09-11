@@ -36,7 +36,16 @@ class Math{
         }
         return false;
     }
-
+    public double sqroot(int n){
+        int sr=0;
+        for(int i=1;i<=n/2;i++){
+            if(n/i==i){
+                sr = i;
+                break;
+            }
+        }
+        return sr;
+}
 }
 public class Main{
     public static void main(String args[]){
@@ -50,6 +59,7 @@ public class Main{
     System.out.println(k+" is even: "+m.oe(k));
     System.out.println("Sum of first "+k+" natural numbers is: "+m.nsum(k));
     m.isprime(k);
+    System.out.println("Square root of "+k+" is: "+m.sqroot(k));
     String n = sc.next();
     System.out.println(n+" is divisible by 13: "+m.isdiv13(n));
 }
