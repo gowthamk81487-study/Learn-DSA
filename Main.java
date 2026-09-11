@@ -29,6 +29,13 @@ class Math{
     public int lcm(int a, int b){
         return (a*b)/gcd(a,b);
     }
+    public boolean isdiv13(String n){
+        int a = Integer.parseInt(n);
+        if(a%13==0){
+            return true;
+        }
+        return false;
+    }
 
 }
 public class Main{
@@ -38,9 +45,12 @@ public class Main{
     int a = sc.nextInt();
     int b = sc.nextInt();
     System.out.println("GCD of "+a+" and "+b+" is: "+m.gcd(a,b));
-    System.out.println(a+" is even: "+m.oe(a));
-    System.out.println("Sum of first "+a+" natural numbers is: "+m.nsum(a));
-    m.isprime(a);
     System.out.println("LCM of "+a+" and "+b+" is: "+m.lcm(a,b));
+    int k = sc.nextInt();
+    System.out.println(k+" is even: "+m.oe(k));
+    System.out.println("Sum of first "+k+" natural numbers is: "+m.nsum(k));
+    m.isprime(k);
+    String n = sc.next();
+    System.out.println(n+" is divisible by 13: "+m.isdiv13(n));
 }
 }
