@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Math{
+class Maths{
     public int gcd(int a, int b){
         int r;
         while(b!=0){
@@ -37,10 +37,10 @@ class Math{
         return false;
     }
     public double sqroot(int n){
-        int sr=0;
-        for(int i=1;i<=n/2;i++){
-            if(n/i==i){
-                sr = i;
+        double sr=0;
+        for(double i=1;i<=n/2.0;i=i+0.001){
+            if(Math.abs(i*i-n)<0.01){
+                sr = (double)i;
                 break;
             }
         }
@@ -50,7 +50,7 @@ class Math{
 public class Main{
     public static void main(String args[]){
     Scanner sc = new Scanner(System.in);
-    Math m = new Math();
+    Maths m = new Maths();
     int a = sc.nextInt();
     int b = sc.nextInt();
     System.out.println("GCD of "+a+" and "+b+" is: "+m.gcd(a,b));
