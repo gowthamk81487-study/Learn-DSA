@@ -46,12 +46,18 @@ class Maths{
         return f;
     }
     double comb(int n, int r){
+        double c;
         if(n>r){
         double num= fact(n),de= (fact(r)*fact(n-r));
-        return num/de;
+        c = num/de;
         }
         else{
-            System.out.print("Invalid Input: "+n+" is greater than "+r);
+            c=0;
+        }
+        if(c>0){
+            return c;
+        }
+        else{
             return 0;
         }
     }
@@ -63,11 +69,11 @@ public class Main{
     int a = sc.nextInt();
     int b = sc.nextInt();
     System.out.println("Factorial of "+" is: "+m.fact(a));
-    if(m.comb(a,b)!=0){
-        System.out.println(a+"C"+b+" = "+m.comb(a,b));
+    if(m.comb(a,b)>0){
+    System.out.println(a+"C"+b+" = "+m.comb(a,b));
     }
     else{
-        m.comb(a,b);
+        System.out.println("Invalid input: "+b +" is greater than "+a);
     }
     System.out.println("GCD of "+a+" and "+b+" is: "+m.gcd(a,b));
     System.out.println("LCM of "+a+" and "+b+" is: "+m.lcm(a,b));
